@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-11-30T06:17:50.785Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="3b2yeH7MfMLRjnYko_NZ" version="22.1.2" type="device">
+<mxfile host="Electron" modified="2023-12-05T09:00:54.061Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="EmglI7wqRt_3ZyqECD4F" version="22.1.2" type="device">
   <diagram name="Page-1" id="ASnf5UQKjA5EwKTxF0r2">
     <mxGraphModel dx="1226" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -19,7 +19,7 @@
         <mxCell id="vMYGakdIta8Ne1as9olM-1" value="Core SoC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="240" y="500" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="vMYGakdIta8Ne1as9olM-2" value="DAB SoC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" parent="1" vertex="1">
+        <mxCell id="vMYGakdIta8Ne1as9olM-2" value="DAB Radio SoC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="240" y="295" width="120" height="125" as="geometry" />
         </mxCell>
         <mxCell id="vMYGakdIta8Ne1as9olM-4" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" edge="1">
@@ -136,7 +136,7 @@
         <mxCell id="fjLJqy58NG3WYVYFVuVb-2" value="Core SoC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="720" y="500" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="fjLJqy58NG3WYVYFVuVb-3" value="DAB SoC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="fjLJqy58NG3WYVYFVuVb-3" value="DAB Radio SoC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="720" y="295" width="120" height="125" as="geometry" />
         </mxCell>
         <mxCell id="fjLJqy58NG3WYVYFVuVb-8" value="Analog Radio Device" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
