@@ -68,7 +68,7 @@ Accessment: If the customer has physically and purposefullyswitched the radio un
   "EntityType": "",
   "DataType": "Enumeration",
   "ValueRange": { "shutdown": 0, "suspendToRAM": 1, "running": 2 },
-  "InitialValue": 0,
+  "InitialValue": "shutdown",
   "Comments": ""
 }
 ```
@@ -82,12 +82,42 @@ Accessment: If the customer has physically and purposefullyswitched the radio un
   "EntityType": "",
   "DataType": "Enumeration",
   "ValueRange": { "shutdown": 0, "suspended": 1, "running": 2 },
-  "InitialValue": 0,
+  "InitialValue": "shutdown",
   "Comments": ""
 }
 ```
 
-### req_ees_ent_010_dabradioshutdownbutton_DABRadioShutdownButton
+### REQ_EES_ENT_002_DSPPrimaryRouteSetting
+
+```json
+{
+  "EntityID": "REQ_EES_ENT_002",
+  "EntityName": "",
+  "EntityType": "DSPPrimaryRouteSetting",
+  "DataType": "Enumeration",
+  "ValueRange": { "FM/AM/DAB": 0, "TDM0": 1 },
+  "InitialValue": "TDM0",
+  "Comments": ""
+}
+```
+
+Note: More DSPPrimaryRouteSetting details refers to [MT2712 FICM Audio Path](#mt2712-ficm-audio-path)
+
+### REQ_EES_ENT_003_RadioSource
+
+```json
+{
+  "EntityID": "REQ_EES_ENT_002",
+  "EntityName": "Select",
+  "EntityType": "",
+  "DataType": "Enumeration",
+  "ValueRange": { "FM": 0, "AM": 1, "DAB": 2, "EWS": 3 },
+  "InitialValue": "FM",
+  "Comments": ""
+}
+```
+
+### REQ_EES_ENT_010_DABRadioShutdownButton
 
 ```json
 {
@@ -96,7 +126,7 @@ Accessment: If the customer has physically and purposefullyswitched the radio un
   "EntityType": "Button",
   "DataType": "Enumeration",
   "ValueRange": { "open": 0, "shutdown": 1, "disabled": 2 },
-  "InitialValue": 0,
+  "InitialValue": "open",
   "Comments": ""
 }
 ```
@@ -108,9 +138,9 @@ Accessment: If the customer has physically and purposefullyswitched the radio un
   "EntityID": "REQ_EES_ENT_020",
   "EntityName": "ForbittenShutdownPopup",
   "EntityType": "Popup",
-  "DataType": "",
-  "ValueRange": "",
-  "InitialValue": "",
+  "DataType": "Enumeration",
+  "ValueRange": { "disaccept": 0, "accept": 1 },
+  "InitialValue": "disaccept",
   "Comments": "Info user is not allowed to shutdown DAB radio while radio is running."
 }
 ```
@@ -126,10 +156,8 @@ User is allowed to shutdown DAB radio module while any radio feature not being r
 #### 4.1.2 Pre-conditions
 
 - FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode_headunitpowermode) is at _running_
-- [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton_dabradioshutdownbutton) button has been in _open_ status
-- Radio feature is not running, included:
-  - Audio output channel is not occupied by **DAB/FM/AM**
-  - Media source is not selected for **DAB/FM/AM**
+- [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
+- [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _TDM0_
 
 #### 4.1.3 Use Cases
 
@@ -148,15 +176,13 @@ N/A
 
 #### 4.2.1 Description
 
-User is **NOT** allowed to shutdown DAB radio module while any radio feature not being running.
+User is **NOT** allowed to shutdown DAB radio module while any radio feature is running.
 
 #### 4.2.2 Pre-conditions
 
 - FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode) is at _running_
 - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
-- Radio feature is running, included:
-  - Audio output channel is occupied by **DAB/FM/AM**
-  - Media source is selected for **DAB/FM/AM**
+- [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _FM/AM/DAB_
 
 #### 4.2.3 Use Cases
 
@@ -165,13 +191,13 @@ User is **NOT** allowed to shutdown DAB radio module while any radio feature not
 #### 4.2.4 Post-conditions
 
 - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
-- [ForbittenShutdownPopup](#REQ_EES_ENT_020) shows up
+- [ForbittenShutdownPopup](#req_ees_ent_020_forbittenshutdownpopup) shows up
 
 ### 4.3 REQ_EES_DABRADIO_002
 
 #### 4.3.1 Description
 
-User is **ALWAYS** to have radio feature.
+User is **ALWAYS** to have radio feature while [DABRadioPowerStatus](#req_ees_ent_001_dabradiopowerstatus) is at _shutdown_ status
 
 - [EES_UC_001: User use radio feature](#52-ees_uc_001-user-use-radio-feature)
 
@@ -180,6 +206,8 @@ User is **ALWAYS** to have radio feature.
 - FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode) is at _running_
 
 #### 4.3.3 Use Cases
+
+- [EES_UC_001: User use radio feature](#52-ees_uc_001-user-use-radio-feature)
 
 #### 4.3.4 Post-conditions
 
@@ -190,3 +218,9 @@ User is **ALWAYS** to have radio feature.
 ### 5.1 EES_UC_000: User shutdown DAB Radio module
 
 ### 5.2 EES_UC_001: User use radio feature
+
+## Appendix
+
+### MT2712 FICM Audio Path
+
+![MT2712 FICM Audio Path](../res/images/mt2712_audio_path.jpg)
