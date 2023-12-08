@@ -55,11 +55,11 @@ This documentation is **ONLY** applicable for _SAIC FICM2712 Platform with exter
 - OFCOM standards
 - etc.
 
-Accessment: If the customer has physically and purposefullyswitched the radio unit off. Then should be ok for no broadcastfunctionality. The unit should not switch itself off whiledriving.  It must be a customer intervention.
+Accessment: If the customer has physically and purposefully switched the radio unit off. Then should be ok for no broadcast functionality. The unit should not switch itself off whiledriving.  It must be a customer intervention.
 
 ## 3 Entities
 
-### req_ees_ent_000_headunitpowermode_HeadunitPowerMode
+### REQ_EES_ENT_000_HeadunitPowerMode
 
 ```json
 {
@@ -138,10 +138,24 @@ Note: More DSPPrimaryRouteSetting details refers to [MT2712 FICM Audio Path](#mt
   "EntityID": "REQ_EES_ENT_020",
   "EntityName": "ForbiddenShutdownPopup",
   "EntityType": "Popup",
+  "DataType": "",
+  "ValueRange": "",
+  "InitialValue": "",
+  "Comments": "Info user is not allowed to shutdown DAB radio while radio is running."
+}
+```
+
+### REQ_EES_ENT_021_RadioShutdownRiskTermsConditions
+
+```json
+{
+  "EntityID": "REQ_EES_ENT_021",
+  "EntityName": "RadioShutdownRiskTermsConditions",
+  "EntityType": "TermsConditions",
   "DataType": "Enumeration",
   "ValueRange": { "disaccept": 0, "accept": 1 },
   "InitialValue": "disaccept",
-  "Comments": "Info user is not allowed to shutdown DAB radio while radio is running."
+  "Comments": "To remind user the risk of shutting down radio unit."
 }
 ```
 
@@ -151,13 +165,11 @@ Note: More DSPPrimaryRouteSetting details refers to [MT2712 FICM Audio Path](#mt
 
 #### 4.1.1 Description
 
-User is allowed to shutdown DAB radio module while any radio feature not being running.
+User is allowed to shutdown DAB radio module while any radio function not being running.
 
 #### 4.1.2 Pre-conditions
 
-- FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode_headunitpowermode) is at _running_
-- [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
-- [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _TDM0_
+- User has not been using any of radio function.
 
 #### 4.1.3 Use Cases
 
@@ -165,8 +177,7 @@ User is allowed to shutdown DAB radio module while any radio feature not being r
 
 #### 4.1.4 Post-conditions
 
-- [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _shutdwon_ status
-- [DABRadioPowerStatus](#req_ees_ent_001_dabradiopowerstatus)
+- [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) shows as _shutdown_ status
 
 #### 4.1.5 Dependecies
 
@@ -180,9 +191,7 @@ User is **NOT** allowed to shutdown DAB radio module while any radio feature is 
 
 #### 4.2.2 Pre-conditions
 
-- FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode) is at _running_
-- [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
-- [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _FM/AM/DAB_
+- User has been using any of radio function.
 
 #### 4.2.3 Use Cases
 
@@ -190,8 +199,7 @@ User is **NOT** allowed to shutdown DAB radio module while any radio feature is 
 
 #### 4.2.4 Post-conditions
 
-- [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
-- [ForbiddenShutdownPopup](#req_ees_ent_020_forbiddenshutdownpopup) shows up
+- User has been informed that the radio unit is not allowed to shutdown while radion funciton is running only
 
 ### 4.3 REQ_EES_DABRADIO_002
 
@@ -217,12 +225,98 @@ User is **ALWAYS** to have radio feature while [DABRadioPowerStatus](#req_ees_en
 
 ### 5.1 EES_UC_000: User shutdown DAB Radio module
 
-![EES_UC_000](../res/images/ees_uc_000-user-shutdown-dab-radio-module.png)
+#### EES_UC_000_Realization_A
+
+- Actor: Vehicle User
+- Pre-conditions:
+  - FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode) is at _running_
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
+  - [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _TDM0_
+- Activity:
+  - User clicks [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton)
+  - User has been informed by [RadioShutdownRiskTermsConditions](#req_ees_ent_021_radioshutdownrisktermsconditions)
+  - User clicks **ACCEPT** of [RadioShutdownRiskTermsConditions](#req_ees_ent_021_radioshutdownrisktermsconditions)
+- Post-conditions (expectation):
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _shutdwon_ status
+  - [DABRadioPowerStatus](#req_ees_ent_001_dabradiopowerstatus) has been in _shutdown_ status
+
+#### EES_UC_000_Realization_B
+
+- Actor: Vehicle User
+- Pre-conditions:
+  - FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode) is at _running_
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
+  - [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _FM/AM/DAB_
+- Activity: Click [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton)
+- Post-conditions (expectation):
+  - [ForbiddenShutdownPopup](#req_ees_ent_020_forbiddenshutdownpopup) shows up
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button keeps in _open_ status
+  - [DABRadioPowerStatus](#req_ees_ent_001_dabradiopowerstatus) has keeps in _running_ status
 
 ### 5.2 EES_UC_001: User use radio feature
+
+#### EES_UC_001_Realization_A
+
+- Actor: Vehicle User
+- Pre-conditions:
+  - FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode) is at _running_
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
+  <!-- - [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _TDM0_ -->
+- Activity:
+  - User uses FM/AM/Radio feature by switching audio source via steering wheel switch.
+- Post-conditions (expectation):
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button keeps in _open_ status
+  - [DABRadioPowerStatus](#req_ees_ent_001_dabradiopowerstatus) has keeps in _running_ status
+
+#### EES_UC_001_Realization_B
+
+- Actor: Vehicle User
+- Pre-conditions:
+  - FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode) is at _running_
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
+  <!-- - [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _TDM0_ -->
+- Activity:
+  - User uses FM/AM/DAB feature by pressing FM/AM/DAB function entries on HMI foreground(display screen).
+- Post-conditions (expectation):
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button keeps in _open_ status
+  - [DABRadioPowerStatus](#req_ees_ent_001_dabradiopowerstatus) has keeps in _running_ status
+
+#### EES_UC_001_Realization_C
+
+- Actor: Vehicle User
+- Pre-conditions:
+  - FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode) is at _running_
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _shutdown_ status
+  - [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _TDM0_
+- Activity:
+  - User uses FM/AM/Radio feature by switching audio source via steering wheel switch.
+- Post-conditions (expectation):
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button changes to _open_ status
+  - [DABRadioPowerStatus](#req_ees_ent_001_dabradiopowerstatus) has power on to _running_ status
+
+#### EES_UC_001_Realization_D
+
+- Actor: Vehicle User
+- Pre-conditions:
+  - FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode) is at _running_
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _shutdown_ status
+  - [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _TDM0_
+- Activity:
+  - User uses FM/AM/DAB feature by pressing FM/AM/DAB function entries on HMI foreground(display screen).
+- Post-conditions (expectation):
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button changes to _open_ status
+  - [DABRadioPowerStatus](#req_ees_ent_001_dabradiopowerstatus) has power on to _running_ status
+
+## 6 System Realization
+
+### Application_Realization_00
 
 ## Appendix
 
 ### MT2712 FICM Audio Path
 
 ![MT2712 FICM Audio Path](../res/images/mt2712_audio_path.jpg)
+
+```
+
+```
