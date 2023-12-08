@@ -131,12 +131,12 @@ Note: More DSPPrimaryRouteSetting details refers to [MT2712 FICM Audio Path](#mt
 }
 ```
 
-### REQ_EES_ENT_020_ForbittenShutdownPopup
+### REQ_EES_ENT_020_ForbiddenShutdownPopup
 
 ```json
 {
   "EntityID": "REQ_EES_ENT_020",
-  "EntityName": "ForbittenShutdownPopup",
+  "EntityName": "ForbiddenShutdownPopup",
   "EntityType": "Popup",
   "DataType": "Enumeration",
   "ValueRange": { "disaccept": 0, "accept": 1 },
@@ -191,7 +191,7 @@ User is **NOT** allowed to shutdown DAB radio module while any radio feature is 
 #### 4.2.4 Post-conditions
 
 - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
-- [ForbittenShutdownPopup](#req_ees_ent_020_forbittenshutdownpopup) shows up
+- [ForbiddenShutdownPopup](#req_ees_ent_020_forbiddenshutdownpopup) shows up
 
 ### 4.3 REQ_EES_DABRADIO_002
 
@@ -216,6 +216,8 @@ User is **ALWAYS** to have radio feature while [DABRadioPowerStatus](#req_ees_en
 ## 5 Use Cases
 
 ### 5.1 EES_UC_000: User shutdown DAB Radio module
+
+![EES_UC_000](../res/images/ees_uc_000-user-shutdown-dab-radio-module.png)
 
 ### 5.2 EES_UC_001: User use radio feature
 

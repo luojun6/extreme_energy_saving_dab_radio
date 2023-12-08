@@ -1,4 +1,4 @@
-title EES_UC_000: User shutdown DAB Radio module
+title EES_UC_000: User shutdown DAB Radio module & EES_UC_001: User use radio feature
 
 actor #6495ED "user" as user
 
@@ -6,7 +6,7 @@ boundary "HMI" as HMI #gold
 control "RadioEnhancedPM" as RadioPM #gold
 control MediaPlayer #gold
 entity DABRadioShutdownButton #gold
-entity HeadunitPowerMode #gold
+
 entity DABRadioPowerStatus #gold
 entity DSPPrimaryRouteSetting #gold
 
@@ -22,27 +22,86 @@ activate HMI #gold
 activate RadioPM #gold
 activate MediaPlayer #gold
 activate DABRadioShutdownButton #gold
-activate HeadunitPowerMode #gold
 activate DABRadioPowerStatus #gold
 activate DSPPrimaryRouteSetting #gold
 
-
+RadioPM->DSPPrimaryRouteSetting: get
+DSPPrimaryRouteSetting-->RadioPM: return "TDM0"
+RadioPM->DSPPrimaryRouteSetting: subsribe
 box over DABRadioPowerStatus #gold: running
+entryspacing 0
 box over DABRadioShutdownButton #gold: open
+entryspacing 0
 box over DSPPrimaryRouteSetting #gold: TDM0
+entryspacing 1
 
 group #gold User is allowed to shutdown DAB radio module while any radio feature not being running.
 
 user->HMI: Shutdown Radio Module
 HMI->RadioPM: dispatch
-RadioPM-->HMI: return ForbittenShutdownPopup
-HMI->HMI: Popup(ForbittenShutdownPopup)
+RadioPM-->HMI: return ForbiddenShutdownPopup
+HMI->HMI: Popup(ForbiddenShutdownPopup)
 
 alt #6495ED User disaccepted
-
+user->HMI: Select [disaccept]
+HMI->RadioPM: dispatch
 else User accepted
+user->HMI: Select [accept]
+HMI->RadioPM: dispatch
+RadioPM->DABRadioPowerStatus: shutdown
+box over DABRadioPowerStatus #lightgray: shutdown
+deactivate DABRadioPowerStatus
+activate DABRadioPowerStatus #lightgray
+RadioPM->DABRadioShutdownButton: shutdown
+box over DABRadioShutdownButton #lightgray: shutdown
+RadioPM->RadioPM: setPersistency(DABRadioShutdownButton, "shutdown")
+deactivate DABRadioShutdownButton
+activate DABRadioShutdownButton #lightgray
 end 
+
+# User is allowed to shutdown DAB radio module while any radio feature not being running.
 end
 
+entryspacing 3
+
+user->user: Left vehicle and set power off
+deactivate HMI
+deactivate RadioPM
+deactivate MediaPlayer
+deactivate DABRadioShutdownButton 
+deactivate DABRadioPowerStatus
+deactivate DSPPrimaryRouteSetting
+
+user->user: Access vehicle and set power on
+entryspacing 1
+==Vehicle System Power Mode == RUN & User has accessed into vehicle==#lightblue
+
+activate HMI #gold
+activate RadioPM #gold
+activate MediaPlayer #gold
+activate DSPPrimaryRouteSetting #gold
+
+RadioPM->DSPPrimaryRouteSetting: get
+DSPPrimaryRouteSetting-->RadioPM: return "TDM0"
+RadioPM->DSPPrimaryRouteSetting: subsribe
+RadioPM->RadioPM: getPersistency(DABRadioShutdownButton) \n-> return "shutdown"
+RadioPM->DABRadioShutdownButton: shutdown
+activate DABRadioShutdownButton #lightgray
+RadioPM->DABRadioPowerStatus: shutdown
+note over DABRadioPowerStatus #lightgray: There might be non-simultaneous \nwith real FM/AM/DAM PMIC \ncontrolled by MCU
+activate DABRadioPowerStatus #lightgray
+
+group #6495ED User use radio feature
+user->HMI: Select any of radio source
+HMI->MediaPlayer: dispatch
+MediaPlayer->DSPPrimaryRouteSetting: set("FM/AM/DAB")
+DSPPrimaryRouteSetting-->RadioPM: notify
+RadioPM->DABRadioPowerStatus: open
+deactivate DABRadioPowerStatus
+activate DABRadioPowerStatus #gold
+RadioPM->DABRadioShutdownButton: open
+deactivate DABRadioShutdownButton
+activate DABRadioShutdownButton #gold
+end 
 
 
