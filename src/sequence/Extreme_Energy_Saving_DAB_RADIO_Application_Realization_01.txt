@@ -1,0 +1,69 @@
+title Extreme_Energy_Saving_DAB_RADIO_Application_Realization_01
+
+actor #6495ED "user" as user
+
+boundary "HMI" as HMI #gold
+control "RadioEnhancedPM" as RadioPM #gold
+control MediaPlayer #gold
+entity DABRadioShutdownButton #gold
+
+entity DABRadioPowerStatus #gold
+entity DSPPrimaryRouteSetting #gold
+
+note over user, DSPPrimaryRouteSetting#F9E79F: Version 1.0 First released. 
+
+note over HMI, DSPPrimaryRouteSetting#F9E79F: The actuall implementation service names would be different.
+
+activate user #6495ED
+
+==Vehicle System Power Mode == RUN & User has accessed into vehicle==#lightblue
+
+activate HMI #gold
+activate RadioPM #gold
+activate MediaPlayer #gold
+activate DABRadioShutdownButton #gold
+activate DABRadioPowerStatus #gold
+activate DSPPrimaryRouteSetting #6495ED
+
+RadioPM->DSPPrimaryRouteSetting: get
+DSPPrimaryRouteSetting-->RadioPM: return "FA/AM/DAB"
+RadioPM->DSPPrimaryRouteSetting: subsribe
+box over DABRadioPowerStatus #gold: running
+entryspacing 0
+box over DABRadioShutdownButton #gold: open
+entryspacing 0
+box over DSPPrimaryRouteSetting #6495ED: FA/AM/DAB
+entryspacing 1
+
+group #gold EES_UC_001: User use radio feature
+
+user->HMI: Select online media or BTPhone\nfrom steering wheel switch
+
+HMI->MediaPlayer: dispatch
+MediaPlayer->DSPPrimaryRouteSetting: set("TDM0")
+deactivate DSPPrimaryRouteSetting
+activate DSPPrimaryRouteSetting #gold
+box over DSPPrimaryRouteSetting #gold: TDM0
+DSPPrimaryRouteSetting-->RadioPM: notify
+note over HMI, DSPPrimaryRouteSetting #gold: Normal usage of audio features.
+par #6495ED EES_UC_001_Realization_A
+user->HMI: Select from steering wheel switch
+thread EES_UC_001_Realization_B
+user->HMI: Entry radio feature UI fragment
+end 
+
+HMI->MediaPlayer: dispatch
+MediaPlayer->DSPPrimaryRouteSetting: set("FM/AM/DAB")
+deactivate DSPPrimaryRouteSetting
+activate DSPPrimaryRouteSetting #6495ED
+box over DSPPrimaryRouteSetting #6495ED: FM/AM/DAB 
+DSPPrimaryRouteSetting-->RadioPM: notify
+
+par #6495ED EES_UC_001_Realization_E
+user->HMI: Select [DABRadioShutdownButton] \nto "shutdown"
+HMI->RadioPM: dispatch
+RadioPM-->HMI: return ForbiddenShutdownPopup
+HMI->HMI: Popup(ForbiddenShutdownPopup)
+end
+
+end

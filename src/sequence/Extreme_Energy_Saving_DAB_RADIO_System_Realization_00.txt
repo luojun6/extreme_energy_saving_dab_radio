@@ -1,0 +1,54 @@
+title Extreme_Energy_Saving_DAB_RADIO_System_Realization_00
+
+participantgroup #lightyellow **FICM SoC**
+control "RadioEnhancedPM" as RadioPM #gold
+entity DABRadioPowerStatus #gold
+boundary CarService #gold
+end 
+
+participantgroup #D6EAF8 **FICM MCU**
+control MCU_PM #6495ED
+end 
+
+participantgroup #F5B7B1  **FICM Radio Unit**
+entity DAB_RADIO_PMIC #E74C3C
+end
+
+note over RadioPM, DAB_RADIO_PMIC#F9E79F: Version 1.0 First released. 
+note over RadioPM, DAB_RADIO_PMIC#F9E79F: Only applicable for the distribution DAB Radio solution, or so-called external DAB Radio module soluton. 
+
+==Vehicle System Power Mode == RUN & User has accessed into vehicle==#lightblue
+
+activate RadioPM #gold
+activate DABRadioPowerStatus #gold
+activate CarService #gold
+activate MCU_PM #6495ED
+activate DAB_RADIO_PMIC #E74C3C
+
+box over DABRadioPowerStatus #gold: running
+entryspacing 0
+box over DAB_RADIO_PMIC #E74C3C: open
+entryspacing 1
+
+RadioPM->DABRadioPowerStatus: shutdown
+deactivate DABRadioPowerStatus
+activate DABRadioPowerStatus #lightgrey
+box over DABRadioPowerStatus #lightgray: shutdown
+DABRadioPowerStatus->CarService:ipcl_write(DAB_RADIO_PMIC, 0)
+CarService->MCU_PM: dispatch
+MCU_PM->DAB_RADIO_PMIC: disable
+deactivate DAB_RADIO_PMIC
+activate DAB_RADIO_PMIC #lightgrey
+box over DAB_RADIO_PMIC #lightgrey: closed
+
+entryspacing 3
+
+RadioPM->DABRadioPowerStatus: open
+entryspacing 1
+deactivate DABRadioPowerStatus
+activate DABRadioPowerStatus #gold
+DABRadioPowerStatus->CarService:ipcl_write(DAB_RADIO_PMIC, 1)
+CarService->MCU_PM: dispatch
+MCU_PM->DAB_RADIO_PMIC: open
+deactivate DAB_RADIO_PMIC
+activate DAB_RADIO_PMIC #E74C3C

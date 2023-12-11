@@ -1,5 +1,11 @@
 # Extreme Energy Saving Strategy for FICM - DAB Radio
 
+## 0 Legend
+
+| Version | Description     | Date       | Author                              |
+| ------- | --------------- | ---------- | ----------------------------------- |
+| 1.0     | First released. | 2023-12-11 | 罗均<br/>冯恺<br/>吴元春<br/>何蕾涛 |
+
 ## 1 Overview
 
 ### 1.1 Background
@@ -246,8 +252,11 @@ User is **ALWAYS** to have radio feature while [DABRadioPowerStatus](#req_ees_en
 - Pre-conditions:
   - FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode) is at _running_
   - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
-  - [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _FM/AM/DAB_
-- Activity: Click [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton)
+  - [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _FM/AM/\_TDM0_
+- Activity:
+  - User clicks [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton)
+  - User has been informed by [RadioShutdownRiskTermsConditions](#req_ees_ent_021_radioshutdownrisktermsconditions)
+  - User clicks **DISACCEPT** of [RadioShutdownRiskTermsConditions](#req_ees_ent_021_radioshutdownrisktermsconditions)
 - Post-conditions (expectation):
   - [ForbiddenShutdownPopup](#req_ees_ent_020_forbiddenshutdownpopup) shows up
   - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button keeps in _open_ status
@@ -307,9 +316,56 @@ User is **ALWAYS** to have radio feature while [DABRadioPowerStatus](#req_ees_en
   - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button changes to _open_ status
   - [DABRadioPowerStatus](#req_ees_ent_001_dabradiopowerstatus) has power on to _running_ status
 
+#### EES_UC_001_Realization_E
+
+- Actor: Vehicle User
+- Pre-conditions:
+  - FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode) is at _running_
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
+  - [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _FM/AM/DAB_
+- Activity:
+  - User clicks [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton)
+- Post-conditions (expectation):
+  - [ForbiddenShutdownPopup](#req_ees_ent_020_forbiddenshutdownpopup) shows up
+  - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button keeps in _open_ status
+  - [DABRadioPowerStatus](#req_ees_ent_001_dabradiopowerstatus) has keeps in _running_ status
+
 ## 6 System Realization
 
-### Application_Realization_00
+### 6.1 Application Realization
+
+#### Extreme_Energy_Saving_DAB_RADIO_Application_Realization_00
+
+**Covered Use Cases:**
+
+- [EES_UC_000: User shutdown DAB Radio module](#51-ees_uc_000-user-shutdown-dab-radio-module)
+- [EES_UC_001_Realization_C](#ees_uc_001_realization_c)
+- [EES_UC_001_Realization_D](#ees_uc_001_realization_d)
+
+![Extreme_Energy_Saving_DAB_RADIO_Application_Realization_00](./../res/images/Extreme_Energy_Saving_DAB_RADIO_Application_Realization_00.png)
+
+#### Extreme_Energy_Saving_DAB_RADIO_Application_Realization_01
+
+**Covered Use Cases:**
+
+- [EES_UC_001_Realization_A](#EES_UC_001_Realization_A)
+- [EES_UC_001_Realization_B](#EES_UC_001_Realization_B)
+- [EES_UC_001_Realization_E](#EES_UC_001_Realization_E)
+
+![Extreme_Energy_Saving_DAB_RADIO_Application_Realization_00](../res/images/Extreme_Energy_Saving_DAB_RADIO_Application_Realization_01.png)
+
+### 6.2 System Realization
+
+#### EES_DAB_RADIO_System_Realization_00
+
+**Description:** System open/shutdown external DAB Radio module.
+![EES_DAB_RADIO_System_Realization_00](../res/images/Extreme_Energy_Saving_DAB_RADIO_System_Realization_00.png)
+
+### 6.3 Performance Metrics
+
+| UseCase                             | Latency(ms) | SuccessRate(%) | LifeDuration(counts) |
+| ----------------------------------- | ----------- | -------------- | -------------------- |
+| EES_DAB_RADIO_System_Realization_00 | < 1500      | 99.99          | 100k                 |
 
 ## Appendix
 

@@ -93,12 +93,15 @@ activate DABRadioPowerStatus #lightgray
 
 group #6495ED EES_UC_001: User use radio feature
 par #gold EES_UC_001_Realization_C
-user->HMI: Select steering wheel switch
+user->HMI: Select from steering wheel switch
 thread EES_UC_001_Realization_D
 user->HMI: Entry radio feature UI fragment
 end 
 HMI->MediaPlayer: dispatch
 MediaPlayer->DSPPrimaryRouteSetting: set("FM/AM/DAB")
+deactivate DSPPrimaryRouteSetting
+activate DSPPrimaryRouteSetting #6495ED
+box over DSPPrimaryRouteSetting #6495ED: FM/AM/DAB 
 DSPPrimaryRouteSetting-->RadioPM: notify
 RadioPM->DABRadioPowerStatus: open
 deactivate DABRadioPowerStatus

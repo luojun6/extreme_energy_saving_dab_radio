@@ -1,4 +1,4 @@
-title EES_UC_000_Realization_00
+title Extreme_Energy_Saving_DAB_RADIO_Application_Realization_00
 
 actor #6495ED "user" as user
 
@@ -35,18 +35,18 @@ entryspacing 0
 box over DSPPrimaryRouteSetting #gold: TDM0
 entryspacing 1
 
-group #gold User is allowed to shutdown DAB radio module while any radio feature not being running.
+group #gold EES_UC_000: User shutdown DAB Radio module
 
-user->HMI: Shutdown Radio Module
+user->HMI: Select [DABRadioShutdownButton] \nto "shutdown"
 HMI->RadioPM: dispatch
-RadioPM-->HMI: return ForbiddenShutdownPopup
-HMI->HMI: Popup(ForbiddenShutdownPopup)
+RadioPM-->HMI: return RadioShutdownRiskTermsConditions
+HMI->HMI: Popup(RadioShutdownRiskTermsConditions)
 
-alt #6495ED User disaccepted
-user->HMI: Select [disaccept]
+alt #6495ED EES_UC_000_Realization_B
+user->HMI: Select "disaccept"
 HMI->RadioPM: dispatch
-else User accepted
-user->HMI: Select [accept]
+else EES_UC_000_Realization_A
+user->HMI: Select "accept"
 HMI->RadioPM: dispatch
 RadioPM->DABRadioPowerStatus: shutdown
 box over DABRadioPowerStatus #lightgray: shutdown
@@ -91,10 +91,17 @@ RadioPM->DABRadioPowerStatus: shutdown
 note over DABRadioPowerStatus #lightgray: There might be non-simultaneous \nwith real FM/AM/DAM PMIC \ncontrolled by MCU
 activate DABRadioPowerStatus #lightgray
 
-group #6495ED User use radio feature
-user->HMI: Select any of radio source
+group #6495ED EES_UC_001: User use radio feature
+par #gold EES_UC_001_Realization_C
+user->HMI: Select from steering wheel switch
+thread EES_UC_001_Realization_D
+user->HMI: Entry radio feature UI fragment
+end 
 HMI->MediaPlayer: dispatch
 MediaPlayer->DSPPrimaryRouteSetting: set("FM/AM/DAB")
+deactivate DSPPrimaryRouteSetting
+activate DSPPrimaryRouteSetting #6495ED
+box over DSPPrimaryRouteSetting #6495ED: FM/AM/DAB 
 DSPPrimaryRouteSetting-->RadioPM: notify
 RadioPM->DABRadioPowerStatus: open
 deactivate DABRadioPowerStatus
