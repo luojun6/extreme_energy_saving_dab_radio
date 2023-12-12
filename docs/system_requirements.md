@@ -2,9 +2,10 @@
 
 ## 0 Legend
 
-| Version | Description     | Date       | Author                              |
-| ------- | --------------- | ---------- | ----------------------------------- |
-| 1.0     | First released. | 2023-12-11 | 罗均<br/>冯恺<br/>吴元春<br/>何蕾涛 |
+| Version | Description      | Date       | Author                              |
+| ------- | ---------------- | ---------- | ----------------------------------- |
+| 1.0     | First released.  | 2023-12-11 | 罗均<br/>冯恺<br/>吴元春<br/>何蕾涛 |
+| 1.1     | Fixed the typos. | 2023-12-12 | 罗均                                |
 
 ## 1 Overview
 
@@ -61,7 +62,7 @@ This documentation is **ONLY** applicable for _SAIC FICM2712 Platform with exter
 - OFCOM standards
 - etc.
 
-Accessment: If the customer has physically and purposefully switched the radio unit off. Then should be ok for no broadcast functionality. The unit should not switch itself off whiledriving.  It must be a customer intervention.
+Accessment: If the customer has physically and purposefully switched the radio unit off. Then should be ok for no broadcast functionality. The unit should not switch itself off while driving.  It must be a customer intervention.
 
 ## 3 Entities
 
@@ -119,7 +120,7 @@ Note: More DSPPrimaryRouteSetting details refers to [MT2712 FICM Audio Path](#mt
   "DataType": "Enumeration",
   "ValueRange": { "FM": 0, "AM": 1, "DAB": 2, "EWS": 3 },
   "InitialValue": "FM",
-  "Comments": ""
+  "Comments": "EWS stands for Emergency Warning System."
 }
 ```
 
@@ -252,13 +253,12 @@ User is **ALWAYS** to have radio feature while [DABRadioPowerStatus](#req_ees_en
 - Pre-conditions:
   - FICM [HeadunitPowerMode](#req_ees_ent_000_headunitpowermode) is at _running_
   - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button has been in _open_ status
-  - [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _FM/AM/\_TDM0_
+  - [DSPPrimaryRouteSetting](#req_ees_ent_002_dspprimaryroutesetting) is set at _TDM0_
 - Activity:
   - User clicks [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton)
   - User has been informed by [RadioShutdownRiskTermsConditions](#req_ees_ent_021_radioshutdownrisktermsconditions)
   - User clicks **DISACCEPT** of [RadioShutdownRiskTermsConditions](#req_ees_ent_021_radioshutdownrisktermsconditions)
 - Post-conditions (expectation):
-  - [ForbiddenShutdownPopup](#req_ees_ent_020_forbiddenshutdownpopup) shows up
   - [DABRadioShutdownButton](#req_ees_ent_010_dabradioshutdownbutton) button keeps in _open_ status
   - [DABRadioPowerStatus](#req_ees_ent_001_dabradiopowerstatus) has keeps in _running_ status
 

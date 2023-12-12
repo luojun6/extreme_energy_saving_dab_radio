@@ -10,7 +10,7 @@ entity DABRadioShutdownButton #gold
 entity DABRadioPowerStatus #gold
 entity DSPPrimaryRouteSetting #gold
 
-note over user, DSPPrimaryRouteSetting#F9E79F: Version 1.0 First released. 
+note over user, DSPPrimaryRouteSetting#F9E79F: Version 1.0 First released. \nVersion 1.1 Revised typo mistake.
 
 note over HMI, DSPPrimaryRouteSetting#F9E79F: The actuall implementation service names would be different.
 
@@ -32,7 +32,7 @@ box over DABRadioPowerStatus #gold: running
 entryspacing 0
 box over DABRadioShutdownButton #gold: open
 entryspacing 0
-box over DSPPrimaryRouteSetting #6495ED: FA/AM/DAB
+box over DSPPrimaryRouteSetting #6495ED: FM/AM/DAB
 entryspacing 1
 
 group #gold EES_UC_001: User use radio feature
