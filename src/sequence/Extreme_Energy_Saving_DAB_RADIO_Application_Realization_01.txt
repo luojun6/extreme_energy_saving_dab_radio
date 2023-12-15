@@ -8,11 +8,11 @@ control MediaPlayer #gold
 entity DABRadioShutdownButton #gold
 
 entity DABRadioPowerStatus #gold
-entity DSPPrimaryRouteSetting #gold
+entity CarAudioSource #gold
 
-note over user, DSPPrimaryRouteSetting#F9E79F: Version 1.0 First released. \nVersion 1.1 Revised typo mistake.
+note over user, CarAudioSource#F9E79F: Version 1.0 First released. \nVersion 1.1 Revised typo mistake.
 
-note over HMI, DSPPrimaryRouteSetting#F9E79F: The actuall implementation service names would be different.
+note over HMI, CarAudioSource#F9E79F: The actuall implementation service names would be different.
 
 activate user #6495ED
 
@@ -23,16 +23,16 @@ activate RadioPM #gold
 activate MediaPlayer #gold
 activate DABRadioShutdownButton #gold
 activate DABRadioPowerStatus #gold
-activate DSPPrimaryRouteSetting #6495ED
+activate CarAudioSource #6495ED
 
-RadioPM->DSPPrimaryRouteSetting: get
-DSPPrimaryRouteSetting-->RadioPM: return "FA/AM/DAB"
-RadioPM->DSPPrimaryRouteSetting: subsribe
+RadioPM->CarAudioSource: getLastSource()
+CarAudioSource-->RadioPM: return "FA/AM/DAB"
+RadioPM->CarAudioSource: registerAudioSourceChange(RadioEhancedPM.onAudioSourceChangedCallback, RadioEhancedPM.handler)
 box over DABRadioPowerStatus #gold: running
 entryspacing 0
 box over DABRadioShutdownButton #gold: open
 entryspacing 0
-box over DSPPrimaryRouteSetting #6495ED: FM/AM/DAB
+box over CarAudioSource #6495ED: FM/AM/DAB
 entryspacing 1
 
 group #gold EES_UC_001: User use radio feature
@@ -40,12 +40,12 @@ group #gold EES_UC_001: User use radio feature
 user->HMI: Select online media or BTPhone\nfrom steering wheel switch
 
 HMI->MediaPlayer: dispatch
-MediaPlayer->DSPPrimaryRouteSetting: set("TDM0")
-deactivate DSPPrimaryRouteSetting
-activate DSPPrimaryRouteSetting #gold
-box over DSPPrimaryRouteSetting #gold: TDM0
-DSPPrimaryRouteSetting-->RadioPM: notify
-note over HMI, DSPPrimaryRouteSetting #gold: Normal usage of audio features.
+MediaPlayer->CarAudioSource: set("NOT_FM_AM_DAB")
+deactivate CarAudioSource
+activate CarAudioSource #gold
+box over CarAudioSource #gold: NOT_FM_AM_DAB
+CarAudioSource-->RadioPM:RadioEhancedPM.onAudioSourceChangedCallback
+note over HMI, CarAudioSource #gold: Normal usage of audio features.
 par #6495ED EES_UC_001_Realization_A
 user->HMI: Select from steering wheel switch
 thread EES_UC_001_Realization_B
@@ -53,11 +53,11 @@ user->HMI: Entry radio feature UI fragment
 end 
 
 HMI->MediaPlayer: dispatch
-MediaPlayer->DSPPrimaryRouteSetting: set("FM/AM/DAB")
-deactivate DSPPrimaryRouteSetting
-activate DSPPrimaryRouteSetting #6495ED
-box over DSPPrimaryRouteSetting #6495ED: FM/AM/DAB 
-DSPPrimaryRouteSetting-->RadioPM: notify
+MediaPlayer->CarAudioSource: set("FM/AM/DAB")
+deactivate CarAudioSource
+activate CarAudioSource #6495ED
+box over CarAudioSource #6495ED: FM/AM/DAB 
+CarAudioSource-->RadioPM:RadioEhancedPM.onAudioSourceChangedCallback
 
 par #6495ED EES_UC_001_Realization_E
 user->HMI: Select [DABRadioShutdownButton] \nto "shutdown"

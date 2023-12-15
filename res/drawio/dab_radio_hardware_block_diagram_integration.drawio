@@ -1,149 +1,292 @@
-<mxfile host="Electron" modified="2023-12-05T09:51:01.276Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="gl6m0EQr-QVrelk6hXcC" version="22.1.2" type="device">
+<mxfile host="Electron" modified="2023-12-15T09:16:48.582Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="G16d-saSXgfEfBzH4P9L" version="22.1.2" type="device">
   <diagram name="Page-1" id="o_aSaVsK5E4mOsSdIn7d">
-    <mxGraphModel dx="1226" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="1042" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="280" y="40" width="480" height="540" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="560" y="40" width="480" height="540" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" vertex="1" parent="1">
-          <mxGeometry x="450" y="80" width="280" height="480" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" parent="1" vertex="1">
+          <mxGeometry x="730" y="80" width="280" height="480" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-3" value="Core SoC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="470" y="480" width="120" height="60" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-3" value="Core SoC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="750" y="480" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-4" value="DAB Radio SoC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="470" y="275" width="120" height="125" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-4" value="DAB Radio SoC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="750" y="275" width="120" height="125" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-5" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-5" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="510" y="480" as="sourcePoint" />
-            <mxPoint x="510" y="400" as="targetPoint" />
+            <mxPoint x="790" y="480" as="sourcePoint" />
+            <mxPoint x="790" y="400" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-6" value="Control Data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="gsh-KcDw_GJyRVOF4rT0-5">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-6" value="Control Data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="gsh-KcDw_GJyRVOF4rT0-5" vertex="1" connectable="0">
           <mxGeometry x="0.5464" y="-9" relative="1" as="geometry">
             <mxPoint x="-9" y="22" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gsh-KcDw_GJyRVOF4rT0-3" target="gsh-KcDw_GJyRVOF4rT0-29">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="560" y="535" as="sourcePoint" />
-            <mxPoint x="610" y="485" as="targetPoint" />
+            <mxPoint x="310" y="410" as="sourcePoint" />
+            <mxPoint x="390" y="300" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="670" y="510" />
+              <mxPoint x="390" y="410" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-8" value="Enable" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="gsh-KcDw_GJyRVOF4rT0-7">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-8" value="Enable" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="gsh-KcDw_GJyRVOF4rT0-7" vertex="1" connectable="0">
           <mxGeometry x="0.2217" y="-2" relative="1" as="geometry">
             <mxPoint x="-2" y="6" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-9" value="Analog Radio Device" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="470" y="119" width="120" height="60" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-9" value="Analog Radio Device" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="750" y="119" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-10" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="109" width="20" height="20" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-10" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="109" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-11" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gsh-KcDw_GJyRVOF4rT0-10" target="gsh-KcDw_GJyRVOF4rT0-9">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-11" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="gsh-KcDw_GJyRVOF4rT0-10" target="gsh-KcDw_GJyRVOF4rT0-9" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="380" y="174" as="sourcePoint" />
-            <mxPoint x="430" y="124" as="targetPoint" />
+            <mxPoint x="660" y="174" as="sourcePoint" />
+            <mxPoint x="710" y="124" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-12" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="149" width="20" height="20" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-12" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="149" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-13" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gsh-KcDw_GJyRVOF4rT0-12">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-13" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="gsh-KcDw_GJyRVOF4rT0-12" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="380" y="214" as="sourcePoint" />
-            <mxPoint x="470" y="169" as="targetPoint" />
+            <mxPoint x="660" y="214" as="sourcePoint" />
+            <mxPoint x="750" y="169" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-14" value="AM" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="360" y="104" width="30" height="30" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-14" value="AM" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="640" y="104" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-15" value="FM" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="360" y="144" width="30" height="30" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-15" value="FM" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="640" y="144" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-16" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gsh-KcDw_GJyRVOF4rT0-17">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-16" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="gsh-KcDw_GJyRVOF4rT0-17" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="380" y="345" as="sourcePoint" />
-            <mxPoint x="470" y="300" as="targetPoint" />
+            <mxPoint x="660" y="345" as="sourcePoint" />
+            <mxPoint x="750" y="300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-17" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="280" width="20" height="20" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-17" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="280" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-18" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gsh-KcDw_GJyRVOF4rT0-19">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-18" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="gsh-KcDw_GJyRVOF4rT0-19" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="380" y="385" as="sourcePoint" />
-            <mxPoint x="470" y="340" as="targetPoint" />
+            <mxPoint x="660" y="385" as="sourcePoint" />
+            <mxPoint x="750" y="340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-19" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="320" width="20" height="20" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-19" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="320" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-20" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gsh-KcDw_GJyRVOF4rT0-21">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-20" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="gsh-KcDw_GJyRVOF4rT0-21" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="380" y="425" as="sourcePoint" />
-            <mxPoint x="470" y="380" as="targetPoint" />
+            <mxPoint x="660" y="425" as="sourcePoint" />
+            <mxPoint x="750" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-21" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="360" width="20" height="20" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-21" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="360" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-22" value="Main DAB III" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="310" y="280" width="80" height="20" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-22" value="Main DAB III" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="590" y="280" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-23" value="Aux DAB III" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="310" y="320" width="80" height="20" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-23" value="Aux DAB III" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="590" y="320" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-24" value="DAB L" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="310" y="360" width="80" height="20" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-24" value="DAB L" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="590" y="360" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-25" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="gsh-KcDw_GJyRVOF4rT0-9">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-25" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="gsh-KcDw_GJyRVOF4rT0-9" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="530" y="275" as="sourcePoint" />
-            <mxPoint x="529.6600000000001" y="215" as="targetPoint" />
+            <mxPoint x="810" y="275" as="sourcePoint" />
+            <mxPoint x="809.6600000000001" y="215" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-26" value="Digital baseband inputs&lt;br&gt;Blend control&lt;br&gt;Digital audio IO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="gsh-KcDw_GJyRVOF4rT0-25">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-26" value="Digital baseband inputs&lt;br&gt;Blend control&lt;br&gt;Digital audio IO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="gsh-KcDw_GJyRVOF4rT0-25" vertex="1" connectable="0">
           <mxGeometry x="0.5464" y="-9" relative="1" as="geometry">
             <mxPoint x="-9" y="25" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-27" value="DAB Radio Integrated Solution" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="280" y="40" width="480" height="40" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-27" value="DAB Radio Integrated Solution - B" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="560" y="40" width="480" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-28" value="FICM/ICM" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="450" y="79" width="280" height="40" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-28" value="FICM/ICM" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="730" y="79" width="280" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-29" value="PMIC of Radio" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="630" y="120" width="80" height="280" as="geometry" />
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-29" value="PMIC of Radio" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="910" y="120" width="80" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-30" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.008;exitY=0.103;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;strokeColor=#FF3333;" edge="1" parent="1" source="gsh-KcDw_GJyRVOF4rT0-29" target="gsh-KcDw_GJyRVOF4rT0-9">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-30" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.008;exitY=0.103;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;strokeColor=#FF3333;" parent="1" source="gsh-KcDw_GJyRVOF4rT0-29" target="gsh-KcDw_GJyRVOF4rT0-9" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="769.28" y="468.25" as="sourcePoint" />
-            <mxPoint x="769.28" y="390.25" as="targetPoint" />
+            <mxPoint x="1049.28" y="468.25" as="sourcePoint" />
+            <mxPoint x="1049.28" y="390.25" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-31" value="Power" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FF0000;" vertex="1" connectable="0" parent="gsh-KcDw_GJyRVOF4rT0-30">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-31" value="Power" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FF0000;" parent="gsh-KcDw_GJyRVOF4rT0-30" vertex="1" connectable="0">
           <mxGeometry x="0.2217" y="-2" relative="1" as="geometry">
             <mxPoint x="5" y="-13" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.008;exitY=0.103;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;strokeColor=#FF3333;" edge="1" parent="1">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.008;exitY=0.103;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;strokeColor=#FF3333;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="629" y="339" as="sourcePoint" />
-            <mxPoint x="590" y="339" as="targetPoint" />
+            <mxPoint x="909" y="339" as="sourcePoint" />
+            <mxPoint x="870" y="339" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gsh-KcDw_GJyRVOF4rT0-33" value="Power" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FF0000;" vertex="1" connectable="0" parent="gsh-KcDw_GJyRVOF4rT0-32">
+        <mxCell id="gsh-KcDw_GJyRVOF4rT0-33" value="Power" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FF0000;" parent="gsh-KcDw_GJyRVOF4rT0-32" vertex="1" connectable="0">
           <mxGeometry x="0.2217" y="-2" relative="1" as="geometry">
             <mxPoint x="5" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="480" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="210" y="80" width="280" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-3" value="Core SoC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="230" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-4" value="DAB Radio SoC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="230" y="275" width="120" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-5" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="270" y="480" as="sourcePoint" />
+            <mxPoint x="270" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-6" value="Control Data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="59Jn5Xxu3eqXkIlJY2q9-5">
+          <mxGeometry x="0.5464" y="-9" relative="1" as="geometry">
+            <mxPoint x="-9" y="22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-9" value="Analog Radio Device" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="230" y="119" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-10" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="109" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-11" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="59Jn5Xxu3eqXkIlJY2q9-10" target="59Jn5Xxu3eqXkIlJY2q9-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="174" as="sourcePoint" />
+            <mxPoint x="190" y="124" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-12" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="149" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-13" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="59Jn5Xxu3eqXkIlJY2q9-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="214" as="sourcePoint" />
+            <mxPoint x="230" y="169" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-14" value="AM" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="104" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-15" value="FM" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="144" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-16" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="59Jn5Xxu3eqXkIlJY2q9-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="345" as="sourcePoint" />
+            <mxPoint x="230" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-17" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="280" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-18" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="59Jn5Xxu3eqXkIlJY2q9-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="385" as="sourcePoint" />
+            <mxPoint x="230" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-19" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="320" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-20" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.165;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="59Jn5Xxu3eqXkIlJY2q9-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="425" as="sourcePoint" />
+            <mxPoint x="230" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-21" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="360" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-22" value="Main DAB III" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="280" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-23" value="Aux DAB III" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="320" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-24" value="DAB L" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="360" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-25" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="59Jn5Xxu3eqXkIlJY2q9-9">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="290" y="275" as="sourcePoint" />
+            <mxPoint x="289.6600000000001" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-26" value="Digital baseband inputs&lt;br&gt;Blend control&lt;br&gt;Digital audio IO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="59Jn5Xxu3eqXkIlJY2q9-25">
+          <mxGeometry x="0.5464" y="-9" relative="1" as="geometry">
+            <mxPoint x="-9" y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-27" value="DAB Radio Integrated Solution - A" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="480" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-28" value="FICM/ICM" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="210" y="79" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-29" value="PMIC of Radio" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="390" y="120" width="80" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-30" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.008;exitY=0.103;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;strokeColor=#FF3333;" edge="1" parent="1" source="59Jn5Xxu3eqXkIlJY2q9-29" target="59Jn5Xxu3eqXkIlJY2q9-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="529.28" y="468.25" as="sourcePoint" />
+            <mxPoint x="529.28" y="390.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-31" value="Power" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FF0000;" vertex="1" connectable="0" parent="59Jn5Xxu3eqXkIlJY2q9-30">
+          <mxGeometry x="0.2217" y="-2" relative="1" as="geometry">
+            <mxPoint x="5" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.008;exitY=0.103;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;strokeColor=#FF3333;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="389" y="339" as="sourcePoint" />
+            <mxPoint x="350" y="339" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-33" value="Power" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FF0000;" vertex="1" connectable="0" parent="59Jn5Xxu3eqXkIlJY2q9-32">
+          <mxGeometry x="0.2217" y="-2" relative="1" as="geometry">
+            <mxPoint x="5" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-34" value="MCU" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="390" y="480" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-35" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="59Jn5Xxu3eqXkIlJY2q9-34" target="59Jn5Xxu3eqXkIlJY2q9-29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="420" as="sourcePoint" />
+            <mxPoint x="400" y="310" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59Jn5Xxu3eqXkIlJY2q9-36" value="Enable" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="59Jn5Xxu3eqXkIlJY2q9-35">
+          <mxGeometry x="0.2217" y="-2" relative="1" as="geometry">
+            <mxPoint x="-2" y="6" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
